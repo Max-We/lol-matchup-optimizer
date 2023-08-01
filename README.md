@@ -2,7 +2,7 @@
 
 Experimental prototype to find the best combos (3 tricks) of champions to main on toplane.
 
-> The entire project ist a very quick and dirty prototype with low code quality. It was written in about 2 hours to try out some ideas. I uploaded it here in case anyone else finds it useful. Please read the paragraph Limitations.
+> The entire project ist a very quick and dirty prototype with low code quality. It was written out of frustration of facing losing matchups in my own games in about 2 hours to try out some ideas. I uploaded it here in case anyone else finds it useful. Please read the paragraph Limitations.
 
 ## Structure
 
@@ -39,4 +39,4 @@ These are your best 3-trick combos for Garen:
 
 The `interpret.ipynb` only does very simple analysis of the data and to get better / more meaningful results one would have to do better in depth analysis on the dataset. The way it's currently calculating the results is just a zero-shot approach to get at least some overview.
 
-The League of Graphs endpoint can change at any moment and because there is no official API and the webiste can change it's HTML structure, this tool could become non-functional or has to be modified as soon as that happens.
+The League of Graphs endpoint can change at any moment and because there is no official API and the website can change its HTML structure, this tool could become non-functional or has to be modified as soon as that happens.
