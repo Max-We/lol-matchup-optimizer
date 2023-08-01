@@ -21,16 +21,15 @@ If you'd like to find the best combination of champs to main on toplane if you a
 ```
 These are your best 3-trick combos for Garen:
 
-- Garen, Malphite, Sett (Score: 19)
-- Garen, Malphite, Gangplank (Score: 19)
-- Garen, Kled, Ornn (Score: 18)
-- Garen, Ornn, Kled (Score: 18)
-- Garen, Sion, Jax (Score: 19)
-- Garen, Sion, Nasus (Score: 19)
-- Garen, Dr. Mundo, Kled (Score: 19)
-- Garen, Jax, Sion (Score: 19)
-- Garen, Jax, Ornn (Score: 19)
-- Garen, Nasus, Ornn (Score: 19)
+- Garen, Malphite, Illaoi (Score: 18)
+- Garen, Pantheon, Irelia (Score: 19)
+- Garen, Pantheon, Dr. Mundo (Score: 19)
+- Garen, Pantheon, Nasus (Score: 19)
+- Garen, Dr. Mundo, Malphite (Score: 18)
+- Garen, Irelia, Malphite (Score: 18)
+- Garen, Illaoi, Malphite (Score: 18)
+- Garen, Nasus, Malphite (Score: 18)
+- Garen, Ornn, Malphite (Score: 19)
 
 * Score stands for amount of counters a combo has. Lower is better.
 ```
