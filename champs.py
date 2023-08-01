@@ -32,6 +32,7 @@ top_champs = [
     'Shen',
     'Singed',
     'Sion',
+    'Tahm Kench',
     'Teemo',
     'Trundle',
     'Tryndamere',

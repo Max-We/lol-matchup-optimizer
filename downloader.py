@@ -72,7 +72,7 @@ def fetch_html(url):
 
 def download_all_matchups():
     base_url = "https://www.leagueofgraphs.com/de/champions/counters/"
-    all_champ_urls = [base_url + c.lower().replace(". ", "").replace("\'", "").replace("wukong", "monkeyking") for c in
+    all_champ_urls = [base_url + c.lower().replace(". ", "").replace("\'", "").replace("wukong", "monkeyking").replace(" ", "") for c in
                       top_champs]
     full_result = {}
     for i, url in enumerate(all_champ_urls):
