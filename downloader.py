@@ -25,7 +25,7 @@ def extract_matchup(soup):
 def get_matchup_html(soup, champ):
     # Winning matchups
     matchups_html = []
-    table_title_1 = f"{champ} gewinnt vermehrt gegen"
+    table_title_1 = f"{champ} wins more against"
     table_1 = soup.find('h3', string=table_title_1)
     if table_1:
         table_1_parent = table_1.find_next_sibling('table')
@@ -36,7 +36,7 @@ def get_matchup_html(soup, champ):
         print(f"Failed to get winning infos for {champ}")
 
     # Losing matchups
-    table_title_2 = f"{champ} verliert vermehrt gegen"
+    table_title_2 = f"{champ} loses more against"
     table_2 = soup.find('h3', string=table_title_2)
     if table_2:
         table_2_parent = table_2.find_next_sibling('table')
@@ -71,9 +71,9 @@ def fetch_html(url):
 
 
 def download_all_matchups():
-    base_url = "https://www.leagueofgraphs.com/de/champions/counters/"
-    all_champ_urls = [base_url + c.lower().replace(". ", "").replace("\'", "").replace("wukong", "monkeyking").replace(" ", "") for c in
-                      top_champs]
+    base_url = "https://www.leagueofgraphs.com/champions/counters/"
+    all_champ_urls = [base_url + c.lower().replace(". ", "").replace("\'", "").replace("wukong", "monkeyking").replace(" ", "") for c in top_champs]
+
     full_result = {}
     for i, url in enumerate(all_champ_urls):
         print(f"=={top_champs[i]}==")

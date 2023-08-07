@@ -8,7 +8,6 @@ import json
 import pickle
 from itertools import islice
 
-from champs import top_champs
 
 # Open the pkl file in read binary mode
 with open('full_result.pickle', 'rb') as f:
@@ -31,15 +30,15 @@ data[my_champ]
 
 results = {}
 for c in data:
-    garen_data = data[my_champ].copy()
-    for k, v in garen_data.items():
+    champ_data = data[my_champ].copy()
+    for k, v in champ_data.items():
         if float(v) < 0:
-            garen_data[k] = 0 if float(data[c].get(k, 0)) > 0 else float(garen_data[k])
+            champ_data[k] = 0 if float(data[c].get(k, 0)) > 0 else float(champ_data[k])
             # if float(data[c].get(k, 0)) > 0:
             #     print(f"{c} counters weakness {k}")
 
     results[c] = 0
-    for value in garen_data.values():
+    for value in champ_data.values():
         if float(value) < 0:
             results[c] += 1
 
@@ -59,15 +58,15 @@ for c in results:
 def weak_matrix(champ):
     results = {}
     for c in data:
-        garen_data = data[champ].copy()
-        for k, v in garen_data.items():
+        champ_data = data[champ].copy()
+        for k, v in champ_data.items():
             if float(v) < 0:
-                garen_data[k] = 0 if float(data[c].get(k, 0)) > 0 else float(garen_data[k])
+                champ_data[k] = 0 if float(data[c].get(k, 0)) > 0 else float(champ_data[k])
                 # if float(data[c].get(k, 0)) > 0:
                 #     print(f"{c} counters weakness {k}")
     
         results[c] = 0
-        for value in garen_data.values():
+        for value in champ_data.values():
             if float(value) < 0:
                 results[c] += 1
         results = dict(sorted(results.items(), key=lambda item: item[1]))
@@ -79,15 +78,15 @@ def weak_matrix(champ):
 
 def score(champ1, champ2):
     results = {}
-    garen_data = data[champ1].copy()
-    for k, v in garen_data.items():
+    champ_data = data[champ1].copy()
+    for k, v in champ_data.items():
         if float(v) < 0:
-            garen_data[k] = 0 if float(data[champ2].get(k, 0)) > 0 else float(garen_data[k])
+            champ_data[k] = 0 if float(data[champ2].get(k, 0)) > 0 else float(champ_data[k])
             # if float(data[c].get(k, 0)) > 0:
             #     print(f"{c} counters weakness {k}")
 
     results[champ2] = 0
-    for value in garen_data.values():
+    for value in champ_data.values():
         if float(value) < 0:
             results[champ2] += 1
     results = dict(sorted(results.items(), key=lambda item: item[1]))
